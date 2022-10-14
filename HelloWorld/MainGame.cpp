@@ -6,12 +6,9 @@
 #include <string>
 #include <conio.h>
 #include <playsoundapi.h>
+#include <cstdio>
 
-int intro()
-{
-	Play::StartAudioLoop("music.mp3"), NULL, SND_FILENAME);
-	return 0;
-}
+
 
 int DISPLAY_WIDTH = 640 * 2;
 int DISPLAY_HEIGHT = 360 * 2;
@@ -53,7 +50,7 @@ void UpdateObject()
 	{
 		score++;
 		myObject.pos = GetPointOnScreen();
-		PlayAudio("collect.mp3");
+		PlaySound(TEXT("collect.mp3"), NULL, SND_FILENAME);
 	}
 	
 	Play::UpdateGameObject(myObject);
@@ -96,47 +93,6 @@ void UpdatePlayer()
 		Play::UpdateGameObject(player);
 		Play::DrawObject(player);
 	}
-#define KEY_UP 72
-#define KEY_DOWN 80
-#define KEY_LEFT 75
-#define KEY_RIGHT 77
-#define KEY_X 120
-	
-	int WASD();
-	{
-
-		char x;
-		x = _getch();
-		char playerInput;
-		int cout << "Enter Player Input ";
-		
-				char key = _getch();
-				int value = key;
-			
-				while (value != KEY_X) {
-
-					switch (value) {
-
-					case condition: (Play::KeyDown(KEY_UP))
-							cout << playerInput << "Goes UP\n\n";
-						break;
-					case condition:  (Play::KeyDown (KEY_UP))
-							cout << playerInput << "Goes DOWN\n\n";
-						break;
-					case condition: (Play::KeyDown (KEY_UP))
-							cout << playerInput << "Goes LEFT\n\n";
-						break;
-					case condition: (Play::KeyDown (KEY_UP))
-							cout << playerInput << "Goes RIGHT\n\n";
-					}
-
-					key = x;
-					value = key;
-		}
-				system("pause")
-				return 0;
-		}
-
 	
 	}
 
